@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+Name: Aidan McConnell
+Date Created: 12/18/2018
+Most recent revision:
+-->
+<html>
+<head>
+	<script type="text/JavaScript" src="luckySevens.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        rel="stylesheet" type="text/css" />
+<head>
+<body>
+<div class="container">
+	<h1>Lucky Sevens</h1>
+	<form name="numberFun" onsubmit="return game();"
+		onreset="resetForm();" class="form-inline">
+			<div class="form-group">
+				<label for="startingBet">Starting Bet:</label>
+				<input type="number" class="form-control" id="startingBet">
+			</div>
+			
+			<br/><br>
+			<button type="submit" id="submitButton" class="btn btn-default">Play</button>
+			<button type="reset" id="resetButton" class="btn">Reset</button>
+			
+	</form>
+	<br/>
+	<br/>
+	<hr/>
+	<table id="results" class="table table-striped" style="display:none;">
+		<thead>
+			<tr>
+				
+				<th colspan="2" style="text-align:center;"><h1>Results</h1></th>
+			</tr>
+		</thead>
+	
+		<tbody>
+			<tr>
+				<td>Starting Bet</td>
+				<td><span id="Bet"></span></td>
+			</tr>
+			<tr>
+				<td>Total Rolls Before Going Broke</td>
+				<td><span id="totalRolls"></span></td>
+			</tr>
+			<tr>
+				<td>Highest Amount Won</td>
+				<td><span id="highestAmount"></span></td>
+			</tr>
+			<tr>
+				<td>Roll Count at Highest Amount Won</td>
+				<td><span id="rollAtHigh"></span></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</body>
+</html>
